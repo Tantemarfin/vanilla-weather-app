@@ -22,7 +22,6 @@ function formatDate(timestemp) {
 }
 
 function displayTemperature(response) {
-  console.log(response.data);
   let temreparureElement = document.querySelector("#temperature");
   let cityElement = document.querySelector("#city");
   let humidityElement = document.querySelector("#humidity");
