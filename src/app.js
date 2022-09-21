@@ -21,6 +21,33 @@ function formatDate(timestemp) {
   return days[day] + " " + hours + ":" + minutes;
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let days = ["Thu", "Fri", "Sat", "Sun"];
+  let forecastHTML = `<div class="row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+    <div class="col-2">
+      <div class="weather-forecast-date">${day}</div>
+      <img 
+      src="http://openweathermap.org/img/wn/04n@2x.png" 
+      alt="" 
+      width="42">
+      <div class="weather-forecast-temperature">
+        <span class="weather-forecast-temperature-max">18°</span>
+        <span class="weather-forecast-temperature-min">12°</span>
+      </div>
+    </div>
+  `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function displayTemperature(response) {
   let temreparureElement = document.querySelector("#temperature");
   let cityElement = document.querySelector("#city");
@@ -57,8 +84,6 @@ function handleSubmit(event) {
   search(cityInputElement.value);
 }
 
-search("Odessa");
-
 function displayFahrenheitTemperature(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
@@ -87,3 +112,6 @@ fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
+
+search("Odessa");
+displayForecast();
