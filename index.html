@@ -11,19 +11,18 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <link rel="stylesheet" href="src/style.css"/>
-  
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="src/style.css" />
+
     <title>Weather App</title>
   </head>
   <body>
     <div class="container">
       <div class="weather-app-wrapper">
         <div class="weather-app">
-        <form id="search-form">
-          <div class="row">
-            <div class="col-9">
-              
+          <form id="search-form">
+            <div class="row">
+              <div class="col-9">
                 <input
                   type="search"
                   placeholder="Type a city.."
@@ -31,56 +30,53 @@
                   autocomplete="off"
                   id="city-input"
                 />
-
+              </div>
+              <div class="col-3">
+                <input
+                  type="submit"
+                  value="Search"
+                  class="btn btn-primary w-100"
+                />
+              </div>
             </div>
-            <div class="col-3">
-            
-                <input type="submit" value="Search" class="btn btn-primary w-100"/>
-              
-            </div>
-          </div>
-</form>
+          </form>
           <h1 id="city"></h1>
           <ul>
-            <li> Last updated: <span id="date"> </span></li>
-             <li id="description"></li>
+            <li>Last updated: <span id="date"> </span></li>
+            <li id="description"></li>
           </ul>
-       
           <div class="row">
             <div class="col-6">
               <div class="d-flex weather-temperature">
-              <img src="" alt="" id="icon" />
+                <img src="" alt="" id="icon" />
                 <div>
-                <strong id="temperature">
-                </strong>
+                  <strong id="temperature"> </strong>
                   <span class="units">
-      <a href="#" id="celsius-link" class="active">°C</a> |
-      <a href="#" id="fahrenheit-link">°F</a>
-    </span>
-
-          </div>
-            </div>
-             </div>
+                    <a href="#" id="celsius-link" class="active">°C</a> |
+                    <a href="#" id="fahrenheit-link">°F</a>
+                  </span>
+                </div>
               </div>
+            </div>
+            <div class="col-6">
               <ul>
                 <li>Humidity: <span id="humidity"></span>%</li>
                 <li>Wind: <span id="wind"></span>km/h</li>
               </ul>
             </div>
           </div>
-          
-        
-        <div class="weather-forecast" id="forecast"></div>
-  
+          <div class="weather-forecast" id="forecast"></div>
+        </div>
       </div>
-      </div>
-     
-      <small>
-       <a href="https://github.com/Tantemarfin/vanilla-weather-app" target="_blank">Open-source code</a> by Anna from Odessa
-      </small>
-      </div>
-      </div>
-     
+    </div>
+    <small>
+      <a
+        href="https://github.com/Tantemarfin/vanilla-weather-app"
+        target="_blank"
+        >Open-source code</a
+      >
+      by Anna from Odessa
+    </small>
     <script src="src/app.js"></script>
   </body>
 </html>
